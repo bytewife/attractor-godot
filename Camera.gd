@@ -6,9 +6,9 @@ extends Camera
 # var b = "text"
 
 
-var rad = 80#120
+var rad = 60#120
 
-var z_off = 50
+var z_off = 20
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
