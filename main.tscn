@@ -7,13 +7,13 @@
 [sub_resource type="ShaderMaterial" id=1]
 shader = ExtResource( 1 )
 
-[sub_resource type="ShaderMaterial" id=7]
+[sub_resource type="ShaderMaterial" id=2]
 shader = ExtResource( 3 )
 
-[sub_resource type="PointMesh" id=8]
-material = SubResource( 7 )
+[sub_resource type="PointMesh" id=3]
+material = SubResource( 2 )
 
-[sub_resource type="ProceduralSky" id=5]
+[sub_resource type="ProceduralSky" id=4]
 sky_top_color = Color( 0, 0, 0, 1 )
 sky_horizon_color = Color( 0, 0, 0, 1 )
 sky_energy = 0.0
@@ -21,9 +21,9 @@ ground_horizon_color = Color( 0, 0, 0, 1 )
 ground_curve = 50.0
 sun_energy = 0.0
 
-[sub_resource type="Environment" id=6]
+[sub_resource type="Environment" id=5]
 background_mode = 2
-background_sky = SubResource( 5 )
+background_sky = SubResource( 4 )
 ambient_light_color = Color( 1, 1, 1, 1 )
 ambient_light_energy = 16.0
 glow_enabled = true
@@ -37,7 +37,7 @@ speed_scale = 0.4
 explosiveness = 1.0
 randomness = 1.0
 process_material = SubResource( 1 )
-draw_pass_1 = SubResource( 8 )
+draw_pass_1 = SubResource( 3 )
 
 [node name="OmniLight" type="OmniLight" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 32, 27.8247 )
@@ -57,6 +57,6 @@ shadow_color = Color( 0.823529, 0.305882, 0.305882, 1 )
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( 0, 0, 1, 0, 1, 0, -1, 0, 0, 0, 0, 0 )
-environment = SubResource( 6 )
+environment = SubResource( 5 )
 far = 300.0
 script = ExtResource( 2 )
